@@ -9,11 +9,9 @@
 }
 
 .layout {
-    display: flex;
-    justify-content: flex-end;
+    display: inline-flex;
     flex-direction: column;
-    background-color: #242424;
+    align-items: center;
     width: 100%;
-    padding-top: 40px;
     color: #efefef;
 }
