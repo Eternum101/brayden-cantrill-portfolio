@@ -1,0 +1,131 @@
+.navbar-section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   font-weight: 700;
+   white-space: nowrap;
+   line-height: 150%;
+   padding: 0 60px; 
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.title {
+    display: flex;
+    gap: 4px;
+    font-size: 30px;
+    font-weight: 600;
+    margin: auto 0;
+}
+
+h4 {
+    color: #efefef;
+    font-family: Inter, sans-serif;
+}
+
+h4 span {
+    color: #6c14fc;
+    font-family: Inter, sans-serif;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-basis: auto;
+    margin: auto 0;
+    color: #efefef;
+}
+
+.btn-talk button {
+    justify-content: center;
+    background-color: #6c14fc;
+    color: var(--White, #fff);
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    outline: none;
+    border: none;
+}
+
+.information-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    padding: 0 60px;
+}
+
+.information-container {
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    gap: 20px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 45%;
+    margin-left: 0px;
+}
+
+.info-left-column {
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    padding: 72px 0;
+}
+
+.info-left-column h3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.info-left-column h4 {
+    margin-top: 16px;
+    font-size: 48px;
+    line-height: 67px;
+}
+
+.info-left-column h4 span {
+    font-size: 72px;
+}
+
+.info-left-column h5 {
+    margin-top: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btn-info-container {
+    display: flex;
+    margin-top: 48px;
+    gap: 20px;
+    font-weight: 700;
+}
+
+.btn-info-container button {
+    padding: 15px 56px;
+    font-size: 16px;
+    font-weight: 700;
+    outline: none;
+    border: none;
+}
+
+.btn-info-container button:first-of-type {
+    background-color: #6c14fc;
+    color: #fff;
+}
