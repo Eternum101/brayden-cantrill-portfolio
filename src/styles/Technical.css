@@ -1,0 +1,109 @@
+/* Technical Section */
+
+.technical-section {
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    gap: 10px;
+    justify-content: center;
+    padding: 64px 124px;
+    width: 100%;
+}
+
+.technical-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.technical-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 810px;
+    text-align: center;
+}
+
+.technical-title {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 150%;
+}
+
+.technical-description {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0;
+}
+
+.technical-cards {
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 32px;
+}
+
+.technical-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #303030;
+    border-radius: 20px;
+    gap: 24px;
+    height: 610px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0px 15px 10px -15px #111;   
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0;
+}
+
+.card-description {
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0;
+}
+
+.card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6c14fc;
+    font-size: 55px;
+    height: 150px;
+    width: 100%;
+    border-radius:100% 0% 100% 0% / 0% 50% 50% 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-devicons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.devicons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.devicons-container p {
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 150%;
+    font-weight: 700;
+}
