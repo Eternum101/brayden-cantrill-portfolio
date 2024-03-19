@@ -3,9 +3,11 @@ import '../styles/Index.css';
 import '../styles/Hero.css';
 import '../styles/About.css';
 import '../styles/Technical.css';
+import '../styles/Portfolio.css';
 import { Hero } from "../components/Hero";
 import { About } from "../components/About";
 import { Technical } from "../components/Technical";
+import { Portfolio } from "../components/Portfolio";
 
 export function Home() {
     return (
@@ -14,6 +16,7 @@ export function Home() {
       <Hero />
       <About />
       <Technical />
+      <Portfolio />
     </div>
         </>
     )

@@ -1,0 +1,152 @@
+.portfolio-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background-color: #1f1f1f;
+    width: 100%;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 50px 124px 142px;
+    background-color: #6c14fc;
+    width: 100%;
+    text-align: center;
+}
+
+.portfolio-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.portfolio-title {
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: 150%;
+    font-weight: 700;
+}
+
+.portfolio-description {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0;
+    width: 800px;
+}
+
+.portfolio-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    margin-top: -100px;
+    padding: 0px 124px 64px;
+    width: 100%;
+}
+
+.portfolio-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 64px;
+}
+
+.portfolio-card {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex: 1;
+    flex-grow: 1;
+    gap: 32px;
+}
+
+.portfolio-image {
+    width: 355px;
+    height: 200px;
+    object-fit: cover;
+    background-color: gray;
+    align-self: stretch;
+}
+
+.portfolio-card-desc-container {
+    display: flex;
+    align-items: flex-end;
+    align-self: stretch;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.portfolio-card-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.portfolio-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
+}
+
+.portfolio-card-sub-title {
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 150%;
+}
+
+.portfolio-icon {
+    display: flex;
+    border: transparent;
+    outline: none;
+    background-color: transparent;
+    font-size: 36px;
+}
+
+.portfolio-icon svg {
+    fill: #efefef;
+}
+
+.portfolio-icon:hover {
+    cursor: pointer;
+}
+
+.github-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 150%;
+}
+
+.btn-github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #efefef;
+    background-color: #6c14fc;
+    border: transparent;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 150%;
+    border-radius: 5px;
+}
+
+.btn-github svg {
+    font-size: 25px;
+}
+
+.btn-github:hover {
+    cursor: pointer;
+}

@@ -15,3 +15,7 @@
     width: 100%;
     color: #efefef;
 }
+
+a {
+    text-decoration: none;
+}
