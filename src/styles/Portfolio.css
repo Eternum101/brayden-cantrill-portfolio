@@ -69,8 +69,7 @@
 .portfolio-image {
     width: 355px;
     height: 200px;
-    object-fit: cover;
-    background-color: gray;
+    border-radius: 5px;
     align-self: stretch;
 }
 
