@@ -1,0 +1,148 @@
+.contact-section {
+    display: flex;
+    align-items: flex-start;
+    background-color: #6c14fc;
+    gap: 60px;
+    overflow: hidden;
+    padding: 124px;
+    width: 100%;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    flex: 1;
+    flex-grow: 1;
+    gap: 95px;
+    justify-content: space-between;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 64px;
+    width: 100%;
+}
+
+.contact-heading {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 16px;
+    width: 100%;
+}
+
+.contact-title {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 150%;
+}
+
+.contact-description {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 150%;
+}
+
+.contact-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    flex: 0 0 auto;
+    gap: 32px;
+    width: 100%;
+}
+
+.details {
+    display: flex;
+    align-items: flex-start;
+    flex: 0 0 auto;
+    gap: 16px;
+}
+
+.details svg {
+    font-size: 20px;
+}
+
+.detail-description {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 150%;
+}
+
+.social-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #efefef;
+    border-radius: 15px;
+    height: 30px;
+    width: 30px;
+}
+
+.social-icons svg {
+    font-size: 20px;
+    color: rgb(37, 37, 37);
+}
+
+.text-fields-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-grow: 1;
+    gap: 32px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.text-fields {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 24px;
+    width: 100%;
+}
+
+.text-fields input, textarea {
+    border: none;
+    color: gray;
+    padding: 14px 16px;
+    width: 566px;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 150%;
+}
+
+.textarea-message {
+    height: 170px;
+}
+
+.btn-message {
+    display: flex;
+    background-color: rgb(29, 29, 29);
+    color: #efefef;
+    padding: 12px 56px;
+    outline: none;
+    border: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 150%;
+}

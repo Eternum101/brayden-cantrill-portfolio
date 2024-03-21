@@ -67,7 +67,7 @@ export function Technical() {
               </p>
               <div className="card-devicons">
                 <div className="devicons-container">
-                <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="50" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_338_112)">
                     <path d="M50.229 11H49.379C48.328 11 47.338 11.49 46.699 12.324L37.999 23.701L29.299 12.324C28.662 11.49 27.671 11 26.621 11H25.771L36.742 25.346L25.536 40H26.386C27.437 40 28.427 39.51 29.065 38.676L38 26.992L46.935 38.676C47.573 39.51 48.563 40 49.614 40H50.464L39.258 25.346L50.229 11ZM21.789 34.242C19.235 38.123 14.207 40.112 9.4 38.358C5.171 36.815 2.5 32.611 2.5 28.109V27H14.5H25.5V22.866C25.5 16.361 20.682 10.666 14.205 10.057C6.773 9.35798 0.5 15.21 0.5 22.5V28.073C0.5 33.444 3.715 38.437 8.769 40.256C15.372 42.632 22.317 39.086 24.665 33H24.027C23.116 33 22.289 33.481 21.789 34.242ZM2.5 22.5C2.5 16.71 7.21 12 13 12C18.79 12 23.5 16.71 23.5 22.5V25H2.5V22.5Z" fill="white"/>
                 </g>
@@ -125,7 +125,7 @@ export function Technical() {
             </div>
             <div className="technical-card">
             <div className="card-icon"><VscServerProcess /></div>
-              <div className="card-title">Other</div>
+              <div className="card-title">Dev Tools</div>
               <p className="card-description">
                 I perform usability testing and optimize designs websites based on real-user feedback for seamless
                 interactions.
