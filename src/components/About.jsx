@@ -5,7 +5,11 @@ export function About() {
     <section className="about-section">
         <div className="about-headings">
           <div className="about-title">About Me</div>
-          <div className="about-description">Text Here</div>
+          <div className="about-description">
+            I'm a passionate web developer that specialises in both front-end and back-end development.
+            I'm known for writing clean, efficient code and for having an eye for detail whilst being commited to creating
+            seamless user experiences on the web.
+          </div>
         </div>
         <div className="about-data-container">
           <div className="about-data-info">
@@ -21,9 +25,9 @@ export function About() {
             </div>
           </div>
           <div className="about-data-info">
-            <div className="about-data-title three">273+</div>
+            <div className="about-data-title three">695+</div>
             <div>
-              <div className="about-data-description">Commits Made</div>
+              <div className="about-data-description">Total Contributions</div>
             </div>
           </div>
         </div>

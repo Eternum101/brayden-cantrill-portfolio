@@ -28,8 +28,7 @@ export function Hero() {
                 <span>Brayden Cantrill</span>
             </div>
             <p className="description">
-                Welcome to my portfolio of captivating digital experiences. <br/>Explore my work and let&#39;s create
-                something extraordinary together.
+                Welcome to my portfolio where each project is designed to engage and inspire. <br/>Explore my work and innovate with me.
             </p>
             </div>
             <div className="btn-hero-container">
