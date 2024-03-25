@@ -18,13 +18,12 @@ import {
 
 export function Technical() {
     return (
-    <section className="technical-section">
+    <section id="technical-section" className="technical-section">
         <div className="technical-container">
           <div className="technical-heading">
             <div className="technical-title">Technical Skills</div>
             <p className="technical-description">
-              Explore my design services, from user interface and experience to prototyping and testing. Let&#39;s craft
-              exceptional digital experiences together.
+            Explore the realms of web development with me, from front-end aesthetics to back-end functionality and the development tools that bring it all together.
             </p>
           </div>
           <div className="technical-cards">
@@ -32,8 +31,7 @@ export function Technical() {
               <div className="card-icon"><MdOutlineMonitor /></div>
               <div className="card-title">Front End</div>
               <p className="card-description">
-                &#34;I specialize in user experience research, collaborating on web development, and ensuring
-                user-friendly digital products.
+                &#34;Proficient in front-end development, I specialize in creating responsive designs, implementing interactive features, and optimizing user experience.&#34;
               </p>
             <div className="card-devicons">
                 <div className="devicons-container">
@@ -62,8 +60,7 @@ export function Technical() {
             <div className="card-icon"><FaCode /></div>
               <div className="card-title">Back End</div>
               <p className="card-description">
-                &#34;I specialize in user experience research, collaborating on web development, and ensuring
-                user-friendly digital products.
+                &#34;My back-end development skills encompass server-side logic, database management, and API integration, ensuring seamless data flow and functionality.&#34;
               </p>
               <div className="card-devicons">
                 <div className="devicons-container">
@@ -127,8 +124,7 @@ export function Technical() {
             <div className="card-icon"><VscServerProcess /></div>
               <div className="card-title">Dev Tools</div>
               <p className="card-description">
-                I perform usability testing and optimize designs websites based on real-user feedback for seamless
-                interactions.
+              “Skilled in development tools, I streamline web projects with efficient coding, debugging, and version control practices.”
               </p>
               <div className="card-devicons">
                 <div className="devicons-container">

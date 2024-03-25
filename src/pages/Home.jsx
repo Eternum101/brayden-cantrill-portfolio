@@ -13,7 +13,7 @@ import { Contact } from "../components/Contact";
 
 export function Home() {
     return (
-        <>
+    <>
     <div className="layout">
       <Hero />
       <About />
@@ -21,6 +21,6 @@ export function Home() {
       <Portfolio />
       <Contact />
     </div>
-        </>
+    </>
     )
 }

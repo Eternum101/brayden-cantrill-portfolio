@@ -1,19 +1,19 @@
 .hero-section {
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    justify-content: flex-end;
+    gap: 90px;
+    justify-content: flex-start;
     align-items: center;
     background-color: #242424;
     padding: 40px 0px 0px;
     width: 100%;
+    height: 100vh;
 }
 
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    align-self: stretch;
     justify-content: space-between;
     padding: 0px 124px;
     width: 100%;
@@ -48,8 +48,49 @@
     align-items: flex-end;
     font-size: 18px;
     font-weight: 700;
-    line-height: 23.4px;
+    line-height: 150%;
     gap: 32px;
+    position: relative;
+}
+
+.links a {
+    position: relative;
+    letter-spacing: 0;
+    padding: 7px;
+}
+
+.links a:hover {
+    color: #6c14fc;
+    cursor: pointer;
+}
+
+.links a:after, .links a:before {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 0px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.links a:after {
+    top: -5px;
+    left: -5px;
+    border-top: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.links a:before {
+    right: -5px;
+    bottom: -5px;
+    border-bottom: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+.links a:hover::before,
+.links a:hover::after {
+  width: 10px;
+  height: 10px;
+  border-color: #6c14fc;
 }
 
 .btn-talk {
@@ -61,6 +102,10 @@
     padding: 15px 20px;
     outline: none;
     border: transparent;
+}
+
+.btn-talk:hover {
+    cursor: pointer;
 }
 
 .information-container {
@@ -141,4 +186,80 @@
 .btn-hero-container button:first-of-type {
     color: #efefef;
     background-color: #6c14fc;
+}
+
+.btn-hero-container button:hover {
+    cursor: pointer;
+}
+
+.hero-image {
+    height: 100%;
+}
+
+.scroll-container {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    gap: 25px;
+}
+
+.scroll-container:hover {
+    cursor: pointer;
+}
+
+.arrow {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+}
+
+.arrow:first-child {
+    animation: move 3s ease-out 1s infinite;
+}
+
+.arrow:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+}
+
+.arrow:before,
+.arrow:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.arrow:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+}
+
+.arrow:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+    25% {
+      opacity: 1;
+  
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
 }

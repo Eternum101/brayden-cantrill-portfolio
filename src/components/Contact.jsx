@@ -6,14 +6,13 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export function Contact() {
     return (
-        <section className="contact-section">
+        <section id="contact-section" className="contact-section">
         <div className="contact-container">
         <div className="contact-info">
           <div className="contact-heading">
             <div className="contact-title">Get in Touch</div>
             <p className="contact-description">
-              Have a question or a project in mind? I&#39;d love to hear from you. Let&#39;s chat and make something
-              amazing together.
+            Currently open to new opportunities and eager to connect with like-minded individuals. If you have any questions or wish to discuss a project, don’t hesitate to reach out!
             </p>
           </div>
           <div className="contact-details-container">

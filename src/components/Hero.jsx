@@ -10,10 +10,10 @@ export function Hero() {
                 Brayden <span>Cantrill</span>
             </div>
         <div className="links">
-            <a>About</a>
-            <a>Skills</a>
-            <a>Portfolio</a>
-            <a>Contact</a>
+            <a href="#about-section">About</a>
+            <a href="#technical-section">Skills</a>
+            <a href="#portfolio-section">Portfolio</a>
+            <a href="#contact-section">Contact</a>
         </div>
         <button className="btn-talk">Let's Talk</button>
         </div>
@@ -32,12 +32,17 @@ export function Hero() {
             </p>
             </div>
             <div className="btn-hero-container">
-            <button>Hire Me</button>
-            <button>Portfolio</button>
+                <button>Hire Me</button>
+                <button>Portfolio</button>
             </div>
         </div>
-        <img src={heroImage} alt="Hero Image"/>
+        <img className="hero-image" src={heroImage} alt="Hero Image"/>
         </div>
+        <a href="#about-section" className="scroll-container">
+            <div className="arrow"></div>
+            <div className="arrow"></div>
+            <div className="arrow"></div>
+        </a>
     </section>
     )
 }

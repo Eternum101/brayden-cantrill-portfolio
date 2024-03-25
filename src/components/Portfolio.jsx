@@ -10,13 +10,12 @@ import TicTacToeMockup from '../assets/tic-tac-toe-mockup.png';
 
 export function Portfolio() {
     return (
-        <section className="portfolio-section">
+        <section id="portfolio-section" className="portfolio-section">
         <div className="portfolio-container">
           <div className="portfolio-heading">
             <div className="portfolio-title">My Portfolio</div>
             <p className="portfolio-description">
-              Explore my design services, from user interface and experience to prototyping and testing. Let&#39;s craft
-              exceptional digital experiences together.
+              Browse my featured work for a glimpse into my web development expertise.
             </p>
           </div>
         </div>
