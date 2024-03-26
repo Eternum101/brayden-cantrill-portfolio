@@ -38,11 +38,6 @@ export function Hero() {
         </div>
         <img className="hero-image" src={heroImage} alt="Hero Image"/>
         </div>
-        <a href="#about-section" className="scroll-container">
-            <div className="arrow"></div>
-            <div className="arrow"></div>
-            <div className="arrow"></div>
-        </a>
     </section>
     )
 }
