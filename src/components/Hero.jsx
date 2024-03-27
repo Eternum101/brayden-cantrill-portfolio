@@ -36,8 +36,15 @@ export function Hero() {
                 <button>Portfolio</button>
             </div>
         </div>
-        <img className="hero-image" src={heroImage} alt="Hero Image"/>
+        <div>
+            <img className="hero-image" src={heroImage} alt="Hero Image"/>
         </div>
-    </section>
+    </div>
+    <a href="#about-section" className="scroll-down-container">
+        <div className="arrow"></div>
+        <div className="arrow"></div>
+        <div className="arrow"></div>
+    </a>
+</section>
     )
 }
