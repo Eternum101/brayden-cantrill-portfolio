@@ -1,11 +1,13 @@
 import React from "react"
 import heroImage from '../assets/hero-image.png';
+import { motion } from 'framer-motion';
 
 export function Hero() {
     return (
     <section className="hero-section">
-        <div className="navbar">
-            <div className="background" />
+        <motion.div className="navbar" initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}>
             <div className="logo">
                 Brayden <span>Cantrill</span>
             </div>
@@ -16,9 +18,11 @@ export function Hero() {
             <a href="#contact-section">Contact</a>
         </div>
         <button className="btn-talk">Let's Talk</button>
-        </div>
+        </motion.div>
         <div className="information-container">
-        <div className="information-header">
+        <motion.div className="information-header" initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}>
             <div className="heading">
             <div className="title">Full Stack Web Developer</div>
             <div className="second-title">
@@ -35,10 +39,12 @@ export function Hero() {
                 <button>Hire Me</button>
                 <button>Portfolio</button>
             </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 1 }}>
             <img className="hero-image" src={heroImage} alt="Hero Image"/>
-        </div>
+        </motion.div>
     </div>
     <a href="#about-section" className="scroll-down-container">
         <div className="arrow"></div>
