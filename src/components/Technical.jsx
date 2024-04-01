@@ -15,19 +15,54 @@ import {
     JestPlain, LinuxOriginal,
     NodemonPlain,    
 } from 'devicons-react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export function Technical() {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        rootMargin: '-200px',
+      });
+    
+      const animation = useAnimation();
+    
+      if (inView) {
+        animation.start({
+            y: 0,
+            opacity: 1,
+            transition: { type: 'spring', duration: 1 },
+        });
+    }
+
+    const variants = {
+        visible: {
+          opacity: 1,
+          x: 0,
+          transition: {
+            delayChildren: 0.5,
+            staggerChildren: 0.2
+          }
+        },
+        hidden: { 
+            opacity: 0, 
+            x: -100,
+        }
+      };
+
     return (
     <section id="technical-section" className="technical-section">
         <div className="technical-container">
-          <div className="technical-heading">
+          <motion.div className="technical-heading" 
+            ref={ref}
+            animate={animation}
+            initial={{ y: 50, opacity: 0}}>
             <div className="technical-title">Technical Skills</div>
             <p className="technical-description">
             Explore the realms of web development with me, from front-end aesthetics to back-end functionality and the development tools that bring it all together.
             </p>
-          </div>
-          <div className="technical-cards">
-            <div className="technical-card">
+          </motion.div>
+          <motion.div className="technical-cards" variants={variants} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
+            <motion.div className="technical-card" variants={variants}>
               <div className="card-icon"><MdOutlineMonitor /></div>
               <div className="card-title">Front End</div>
               <p className="card-description">
@@ -55,8 +90,8 @@ export function Technical() {
                     <p>Redux</p>
                 </div>
             </div>
-            </div>
-            <div className="technical-card">
+            </motion.div>
+            <motion.div className="technical-card" variants={variants}>
             <div className="card-icon"><FaCode /></div>
               <div className="card-title">Back End</div>
               <p className="card-description">
@@ -119,8 +154,8 @@ export function Technical() {
                     <p>C# (C Sharp)</p>
                 </div>
             </div>
-            </div>
-            <div className="technical-card">
+            </motion.div>
+            <motion.div className="technical-card" variants={variants}>
             <div className="card-icon"><VscServerProcess /></div>
               <div className="card-title">Dev Tools</div>
               <p className="card-description">
@@ -186,8 +221,8 @@ export function Technical() {
                     <p>Linux</p>
                 </div>
             </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
     )
