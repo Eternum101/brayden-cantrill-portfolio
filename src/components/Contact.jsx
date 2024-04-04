@@ -70,21 +70,21 @@ export function Contact() {
           <div className="contact-details-container">
             <div className="details">
                 <FaPhoneVolume />
-              <div className="detail-description">+1205 5872 321</div>
+              <div className="detail-description">0435 017 722</div>
             </div>
             <div className="details">
                 <IoMailSharp />
-                <div className="detail-description"> contact@sarajonesdesign.com</div>
+                <div className="detail-description"> cantrill.brayden@gmail.com</div>
             </div>
             <div className="details">
                 <FaLocationArrow />
-              <div className="detail-description">1234 Design Street,Creativeville, Webland,Imaginary State, 98765</div>
+              <div className="detail-description">Gold Coast, Australia</div>
             </div>
           </div>
         </div>
         <div className="social-container">
         <div className="social-icons">
-            <FaGithub />
+          <FaGithub onClick={() => window.open('https://github.com/Eternum101', '_blank')} />
         </div>
         <div className="social-icons">
             <FaLinkedin />

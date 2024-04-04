@@ -101,11 +101,30 @@
     font-weight: 700;
     padding: 15px 20px;
     outline: none;
-    border: transparent;
+    border: none;
+    position: relative;
+    transition: transform 150ms ease-in-out;
 }
 
 .btn-talk:hover {
     cursor: pointer;
+    transform: scale(1.1);
+}
+
+.btn-talk::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-45deg, transparent 33%, #efefef 33%, #efefef 66%, transparent 66%);
+    background-size: 300% 300%;
+    transition: background-position 0.8s;
+}
+
+.btn-talk:hover::before {
+    background-position: 100% 100%;
 }
 
 .information-container {
@@ -181,6 +200,7 @@
     outline: none;
     border: transparent;
     letter-spacing: 0;
+    transition: transform 150ms ease-in-out;
 }
 
 .btn-hero-container button:first-of-type {
@@ -190,6 +210,7 @@
 
 .btn-hero-container button:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 .hero-image {
