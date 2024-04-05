@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { IoMailSharp } from "react-icons/io5";
 import { FaLocationArrow } from "react-icons/fa";
@@ -7,6 +7,40 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 export function Contact() {
+  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [message, setMessage] = useState("");
+
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+  
+      const formData = {
+        firstName,
+        email,
+        phoneNumber,
+        message,
+      };
+  
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        console.log('Email sent successfully');
+        setFirstName("");
+        setEmail("");
+        setPhoneNumber("");
+        setMessage("");
+      } else {
+        console.log('Error sending email');
+      }
+    };
+
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -92,13 +126,13 @@ export function Contact() {
         </div>
       </motion.div>
       <motion.div className="text-fields-container" ref={ref} variants={textFieldsVariants} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
-        <div className="text-fields">
-          <input placeholder="First name" type="text" />
-          <input placeholder="Email" type="email" />
-          <input placeholder="Phone number" type="tel" />
-          <textarea className="textarea-message" placeholder="Your message" />
-        </div>
-        <button className="btn-message">Send Message</button>
+        <form onSubmit={handleSubmit} className="text-fields">
+        <input placeholder="First name" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+          <input placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input placeholder="Phone number" type="tel" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+          <textarea className="textarea-message" placeholder="Your message" value={message} onChange={(e) => setMessage(e.target.value)} />
+          <button type="submit" className="btn-message">Send Message</button>
+        </form>
       </motion.div>
     </section>
     )
