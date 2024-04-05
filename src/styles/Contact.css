@@ -153,4 +153,16 @@
     font-weight: bold;
     letter-spacing: 0;
     line-height: 150%;
+    transition: transform 150ms ease-in-out;
+}
+
+.btn-message:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.btn-message:disabled {
+    opacity: 0.5;
+    cursor: default;
+    transform: scale(1);
 }

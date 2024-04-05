@@ -1,16 +1,21 @@
-import React, {useState} from "react";
+import React, { useState, useRef } from "react";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { IoMailSharp } from "react-icons/io5";
 import { FaLocationArrow } from "react-icons/fa";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import ReCAPTCHA from "react-google-recaptcha";
 
 export function Contact() {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
+
+  const siteKey = import.meta.env.VITE_APP_SITE_KEY;
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const [recaptchaCompleted, setRecaptchaCompleted] = useState(false);
 
     const handleSubmit = async (event) => {
       event.preventDefault();
@@ -20,6 +25,7 @@ export function Contact() {
         email,
         phoneNumber,
         message,
+        recaptchaToken,
       };
   
       const response = await fetch('/api/send', {
@@ -40,6 +46,11 @@ export function Contact() {
         console.log('Error sending email');
       }
     };
+
+  const handleRecaptchaChange = (value) => {
+    setRecaptchaToken(value);
+    setRecaptchaCompleted(!!value);
+  };
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -126,13 +137,14 @@ export function Contact() {
         </div>
       </motion.div>
       <motion.div className="text-fields-container" ref={ref} variants={textFieldsVariants} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
-        <form onSubmit={handleSubmit} className="text-fields">
-        <input placeholder="First name" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-          <input placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-          <input placeholder="Phone number" type="tel" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
-          <textarea className="textarea-message" placeholder="Your message" value={message} onChange={(e) => setMessage(e.target.value)} />
-          <button type="submit" className="btn-message">Send Message</button>
-        </form>
+      <form onSubmit={handleSubmit} className="text-fields">
+          <input placeholder="First name" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} required/>
+          <input placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+          <input placeholder="Phone number" type="tel" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} required/>
+          <textarea className="textarea-message" placeholder="Your message" value={message} onChange={(e) => setMessage(e.target.value)} required/>
+          <ReCAPTCHA sitekey={siteKey} onChange={handleRecaptchaChange} />
+          <button type="submit" className="btn-message" disabled={!recaptchaCompleted}>Send Message</button>
+      </form>
       </motion.div>
     </section>
     )
