@@ -64,6 +64,12 @@
     flex: 1;
     flex-grow: 1;
     gap: 32px;
+    transition: transform 150ms ease-in-out;
+}
+
+.portfolio-card:hover {
+    cursor: pointer;
+    transform: scale(1.1) !important;
 }
 
 .portfolio-image {
@@ -105,15 +111,21 @@
     border: transparent;
     outline: none;
     background-color: transparent;
-    font-size: 36px;
+    font-size: 38px;
 }
 
 .portfolio-icon svg {
     fill: #efefef;
+    transition: transform 150ms ease-in-out, border 150ms ease-in-out;
+    border: 2px solid transparent;
+    border-radius: 50px;
 }
 
-.portfolio-icon:hover {
+.portfolio-icon svg:hover {
     cursor: pointer;
+    border: 2px solid #6c14fc;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .github-container {
@@ -139,13 +151,14 @@
     font-weight: bold;
     letter-spacing: 0;
     line-height: 150%;
-    border-radius: 5px;
-}
-
-.btn-github svg {
-    font-size: 25px;
+    transition: transform 150ms ease-in-out;
 }
 
 .btn-github:hover {
     cursor: pointer;
+    transform: translateY(-3px);
+}
+
+.btn-github svg {
+    font-size: 25px;
 }

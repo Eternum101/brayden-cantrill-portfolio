@@ -57,6 +57,7 @@ export function Portfolio() {
         </div>
         <div className="portfolio-cards-container">
           <div className="portfolio-row">
+          <a href="https://social-media-app-el95.onrender.com/" target="_blank">
             <motion.div className="portfolio-card" variants={variants} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
               <img className="portfolio-image" alt="Social Media Application" src={SocialMediaMockup} />
               <div className="portfolio-card-desc-container">
@@ -64,11 +65,13 @@ export function Portfolio() {
                   <div className="portfolio-card-title">Social Media Application</div>
                   <p className="portfolio-card-sub-title">Web Design / Development</p>
                 </div>
-              <a href="https://social-media-app-el95.onrender.com/">
+              <a href="https://social-media-app-el95.onrender.com/" target="_blank">
                 <button className="portfolio-icon"><BsFillArrowUpRightCircleFill /></button>
               </a>
               </div>
             </motion.div>
+          </a>
+          <a href="https://messaging-app-2mr0.onrender.com/" target="_blank">
             <motion.div className="portfolio-card" variants={variants} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
               <img className="portfolio-image" alt="Messaging Application" src={MessagingAppMockup} />
               <div className="portfolio-card-desc-container">
@@ -76,11 +79,13 @@ export function Portfolio() {
                   <div className="portfolio-card-title">Messaging Application</div>
                   <p className="portfolio-card-sub-title">Web Design / Development</p>
                 </div>
-              <a href="https://messaging-app-2mr0.onrender.com/">
+              <a href="https://messaging-app-2mr0.onrender.com/" target="_blank">
                 <button className="portfolio-icon"><BsFillArrowUpRightCircleFill /></button>
               </a>
               </div>
             </motion.div>
+            </a>
+            <a href="https://photo-tagging-app-lzga.onrender.com/" target="_blank">
             <motion.div className="portfolio-card" variants={variants} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
               <img className="portfolio-image" alt="Photo Tagging Application" src={PhotoTagMockup} />
               <div className="portfolio-card-desc-container">
@@ -88,13 +93,15 @@ export function Portfolio() {
                   <div className="portfolio-card-title">Photo Tagging Application</div>
                   <div className="portfolio-card-sub-title">Web Design / Development</div>
                 </div>
-              <a href="https://photo-tagging-app-lzga.onrender.com/">
+              <a href="https://photo-tagging-app-lzga.onrender.com/" target="_blank">
                 <button className="portfolio-icon"><BsFillArrowUpRightCircleFill /></button>
               </a>
               </div>
             </motion.div>
+            </a>
           </div>
           <div className="portfolio-row">
+        <a href="https://eternum101.github.io/weather-app/" target="_blank">
           <motion.div className="portfolio-card" variants={variants} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
               <img className="portfolio-image" alt="Weather Application" src={WeatherAppMockup} />
               <div className="portfolio-card-desc-container">
@@ -102,11 +109,13 @@ export function Portfolio() {
                   <div className="portfolio-card-title">Weather Application</div>
                   <div className="portfolio-card-sub-title">Web Design / Development</div>
                 </div>
-              <a href="https://eternum101.github.io/weather-app/">
+              <a href="https://eternum101.github.io/weather-app/" target="_blank">
                 <button className="portfolio-icon"><BsFillArrowUpRightCircleFill /></button>
               </a>
               </div>
             </motion.div>
+          </a>
+          <a href="https://brayden-shopping-cart.netlify.app/" target="_blank">
             <motion.div className="portfolio-card" variants={variants} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
               <img className="portfolio-image" alt="Shopping Cart Project" src={ShoppingCartMockup} />
               <div className="portfolio-card-desc-container">
@@ -114,11 +123,13 @@ export function Portfolio() {
                   <div className="portfolio-card-title">Shopping Cart Project</div>
                   <div className="portfolio-card-sub-title">Web Design / Development</div>
                 </div>
-              <a href="https://brayden-shopping-cart.netlify.app/">
+              <a href="https://brayden-shopping-cart.netlify.app/" target="_blank">
                 <button className="portfolio-icon"><BsFillArrowUpRightCircleFill /></button>
               </a>
               </div>
             </motion.div>
+          </a>
+          <a href="https://eternum101.github.io/tic-tac-toe/" target="_blank">
             <motion.div className="portfolio-card" variants={variants} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
               <img className="portfolio-image" alt="Tic Tac Toe Game" src={TicTacToeMockup} />
               <div className="portfolio-card-desc-container">
@@ -126,15 +137,16 @@ export function Portfolio() {
                   <div className="portfolio-card-title">Tic Tac Toe Game</div>
                   <div className="portfolio-card-sub-title">Web Design / Development</div>
                 </div>
-              <a href="https://eternum101.github.io/tic-tac-toe/">
+              <a href="https://eternum101.github.io/tic-tac-toe/" target="_blank">
                 <button className="portfolio-icon"><BsFillArrowUpRightCircleFill /></button>
               </a>
               </div>
             </motion.div>
+          </a>
           </div>
           <div className="github-container">
             View my other projects/repositories here:
-            <a href="https://github.com/Eternum101"> 
+            <a href="https://github.com/Eternum101" target="_blank"> 
                 <button className="btn-github">
                     <FaGithub /> Brayden Cantrill
                 </button>

@@ -17,7 +17,9 @@ export function Hero() {
             <a href="#portfolio-section">Portfolio</a>
             <a href="#contact-section">Contact</a>
         </div>
-        <button className="btn-talk">Let's Talk</button>
+        <a href="#contact-section">
+            <button className="btn-talk">Let's Talk</button>
+        </a>
         </motion.div>
         <div className="information-container">
         <motion.div className="information-header" initial={{ opacity: 0, x: -50 }}
@@ -36,8 +38,10 @@ export function Hero() {
             </p>
             </div>
             <div className="btn-hero-container">
-                <button>Hire Me</button>
-                <button>Portfolio</button>
+                <button className="btn-hire">Hire Me</button>
+            <a href="#portfolio-section">
+                <button className="btn-portfolio">Portfolio</button>
+            </a>
             </div>
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 50 }}

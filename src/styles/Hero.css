@@ -203,9 +203,14 @@
     transition: transform 150ms ease-in-out;
 }
 
-.btn-hero-container button:first-of-type {
+.btn-hire {
     color: #efefef;
     background-color: #6c14fc;
+}
+
+.btn-portfolio {
+    color: #141414;
+    background-color: #efefef;
 }
 
 .btn-hero-container button:hover {

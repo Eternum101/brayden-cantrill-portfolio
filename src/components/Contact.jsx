@@ -128,8 +128,8 @@ export function Contact() {
           </div>
         </div>
         <div className="social-container">
-        <div className="social-icons">
-          <FaGithub onClick={() => window.open('https://github.com/Eternum101', '_blank')} />
+        <div className="social-icons" onClick={() => window.open('https://github.com/Eternum101', '_blank')}>
+          <FaGithub />
         </div>
         <div className="social-icons">
             <FaLinkedin />
