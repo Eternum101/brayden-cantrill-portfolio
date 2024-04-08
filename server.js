@@ -37,6 +37,12 @@ app.post('/api/send', async (req, res) => {
         Contact: ${phoneNumber}
         Message: ${message}
       `,
+      html: `
+      <h1>Message from ${firstName} (${email})</h1>
+      <p><strong>From:</strong> ${firstName}</p>
+      <p><strong>Contact:</strong> ${phoneNumber}</p>
+      <p><strong>Message:</strong> ${message}</p>
+    `,
     };
 
     let info = await transporter.sendMail(mailOptions);

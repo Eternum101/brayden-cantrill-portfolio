@@ -1,8 +1,9 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { IoMailSharp } from "react-icons/io5";
 import { FaLocationArrow } from "react-icons/fa";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { BsFillSendCheckFill } from "react-icons/bs";
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ReCAPTCHA from "react-google-recaptcha";
@@ -13,12 +14,17 @@ export function Contact() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+
   const siteKey = import.meta.env.VITE_APP_SITE_KEY;
   const [recaptchaToken, setRecaptchaToken] = useState(null);
   const [recaptchaCompleted, setRecaptchaCompleted] = useState(false);
 
     const handleSubmit = async (event) => {
       event.preventDefault();
+
+      setIsLoading(true);
   
       const formData = {
         firstName,
@@ -35,17 +41,28 @@ export function Contact() {
         },
         body: JSON.stringify(formData),
       });
+
+      setIsLoading(false);
   
       if (response.ok) {
-        console.log('Email sent successfully');
+        setShowPopup(true);
         setFirstName("");
         setEmail("");
         setPhoneNumber("");
         setMessage("");
       } else {
-        console.log('Error sending email');
       }
     };
+
+    useEffect(() => {
+    if (showPopup) {
+      const timer = setTimeout(() => {
+        setShowPopup(false);
+      }, 3000);
+    
+      return () => clearTimeout(timer);
+    }
+  }, [showPopup]);
 
   const handleRecaptchaChange = (value) => {
     setRecaptchaToken(value);
@@ -103,7 +120,13 @@ export function Contact() {
   };
 
     return (
-        <section id="contact-section" className="contact-section">
+      <section id="contact-section" className="contact-section">
+        {showPopup && (
+        <div className={`popup ${showPopup ? 'show' : ''}`}>
+          <BsFillSendCheckFill />
+          Your message has been sent!
+        </div>
+      )}
         <motion.div className="contact-container" ref={ref} variants={contactInfoVariants} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
         <div className="contact-info">
           <div className="contact-heading">
@@ -137,6 +160,9 @@ export function Contact() {
         </div>
       </motion.div>
       <motion.div className="text-fields-container" ref={ref} variants={textFieldsVariants} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
+        {isLoading ? (
+          <div className="contact-loader"></div>
+        ) : (
       <form onSubmit={handleSubmit} className="text-fields">
           <input placeholder="First name" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} required/>
           <input placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
@@ -145,6 +171,7 @@ export function Contact() {
           <ReCAPTCHA sitekey={siteKey} onChange={handleRecaptchaChange} />
           <button type="submit" className="btn-message" disabled={!recaptchaCompleted}>Send Message</button>
       </form>
+    )}
       </motion.div>
     </section>
     )
