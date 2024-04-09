@@ -130,12 +130,15 @@
 
 .text-fields input, textarea {
     border: none;
-    color: gray;
+    color: #1f1f1f;
     padding: 14px 16px;
     width: 566px;
     font-size: 14px;
     letter-spacing: 0;
     line-height: 150%;
+    border-radius: 3px;
+    background-color: #efefef;
+    outline: none;
 }
 
 .textarea-message {
