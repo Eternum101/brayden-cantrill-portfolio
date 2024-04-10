@@ -110,12 +110,16 @@
 }
 
 @media (max-width: 800px) {
-    .technical-heading {
-        width: 100%;
+    .technical-title {
+        font-size: 24px;
     }
 
     .technical-description {
-        font-size: 14px;
+        font-size: 13px;
+    }
+
+    .technical-heading {
+        width: 100%;
     }
 
     .technical-cards {
@@ -143,5 +147,35 @@
 
     .card-title {
         font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+   .technical-heading {
+        width: 100%;
+    }
+
+    .technical-cards {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .technical-card {
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        align-self: center;
+    }
+
+    .card-devicons {
+        padding: 20px;
+    }
+
+    .card-description {
+        width: 90%;
+    }
+
+    .card-icon {
+        height: 100px;
     }
 }

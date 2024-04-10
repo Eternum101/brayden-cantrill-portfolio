@@ -67,8 +67,17 @@
 }
 
 @media (max-width: 800px) {
+    .about-section {
+        gap: 0px;
+    }
+    
+    .about-title {
+        font-size: 24px;
+    }
+
     .about-description {
-        width: 100%;
+        width: 350px;
+        font-size: 13px;
     }
 
     .about-data-container {
@@ -76,5 +85,17 @@
         justify-content: center;
         align-items: center;
         gap: 50px;
+    }
+
+    .about-data-container {
+        gap: 5px;
+    }
+
+    .about-data-title {
+        font-size: 36px;
+    }
+    
+    .about-data-description {
+        font-size: 13px;
     }
 }
