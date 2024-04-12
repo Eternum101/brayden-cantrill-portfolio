@@ -9,9 +9,8 @@ import { useInView } from 'react-intersection-observer';
 import ReCAPTCHA from "react-google-recaptcha";
 
 export function Contact() {
-  const [firstName, setFirstName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
@@ -27,9 +26,8 @@ export function Contact() {
       setIsLoading(true);
   
       const formData = {
-        firstName,
+        name,
         email,
-        phoneNumber,
         message,
         recaptchaToken,
       };
@@ -46,9 +44,8 @@ export function Contact() {
   
       if (response.ok) {
         setShowPopup(true);
-        setFirstName("");
+        setName("");
         setEmail("");
-        setPhoneNumber("");
         setMessage("");
       } else {
       }
@@ -164,9 +161,8 @@ export function Contact() {
           <div className="contact-loader"></div>
         ) : (
       <form onSubmit={handleSubmit} className="text-fields">
-          <input placeholder="First name" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} required/>
+          <input placeholder="Name" type="text" value={name} onChange={(e) => setName(e.target.value)} required/>
           <input placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
-          <input placeholder="Phone number" type="tel" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} required/>
           <textarea className="textarea-message" placeholder="Your message" value={message} onChange={(e) => setMessage(e.target.value)} required/>
           <ReCAPTCHA sitekey={siteKey} onChange={handleRecaptchaChange} />
           <button type="submit" className="btn-message" disabled={!recaptchaCompleted}>Send Message</button>

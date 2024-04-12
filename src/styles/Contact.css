@@ -311,6 +311,16 @@
         justify-content: center;
         align-items: center;
     }
+
+    .contact-loader {
+        top: 10px;
+        left: 10px;
+    }
+
+    .popup {
+        padding: 15px;
+        width: 310px;
+    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1024px) {

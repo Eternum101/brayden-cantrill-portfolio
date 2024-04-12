@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post('/api/send', async (req, res) => {
-  let { firstName, email, phoneNumber, message, recaptchaToken } = req.body;
+  let { name, email, message, recaptchaToken } = req.body;
 
   const googleVerifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`;
   const response = await axios.post(googleVerifyURL);
@@ -31,16 +31,14 @@ app.post('/api/send', async (req, res) => {
     let mailOptions = {
       from: email,
       to: process.env.EMAIL,
-      subject: `Message from ${firstName} (${email})`,
+      subject: `Message from ${name} (${email})`,
       text: `
-        From: ${firstName}
-        Contact: ${phoneNumber}
+        From: ${name}
         Message: ${message}
       `,
       html: `
-      <h1>Message from ${firstName} (${email})</h1>
-      <p><strong>From:</strong> ${firstName}</p>
-      <p><strong>Contact:</strong> ${phoneNumber}</p>
+      <h1>Message from ${name} (${email})</h1>
+      <p><strong>From:</strong> ${name}</p>
       <p><strong>Message:</strong> ${message}</p>
     `,
     };
