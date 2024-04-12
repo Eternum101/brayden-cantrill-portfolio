@@ -267,7 +267,7 @@
 @media (max-width: 800px) {
     .contact-section {
         flex-direction: column;
-        padding: 15px;
+        padding: 50px;
         justify-content: center;
         align-items: center;
     }
