@@ -64,6 +64,7 @@ export function Portfolio() {
                 <div className="portfolio-card-desc">
                   <div className="portfolio-card-title">Social Media Application</div>
                   <p className="portfolio-card-sub-title">Web Design / Development</p>
+                  <p className="portfolio-card-tools">React, JavaScript, Node, Express, MongoDB, Material UI, Redux, Firebase</p>
                 </div>
               <a href="https://social-media-app-el95.onrender.com/" target="_blank">
                 <button className="portfolio-icon"><BsFillArrowUpRightCircleFill /></button>
@@ -78,6 +79,7 @@ export function Portfolio() {
                 <div className="portfolio-card-desc">
                   <div className="portfolio-card-title">Messaging Application</div>
                   <p className="portfolio-card-sub-title">Web Design / Development</p>
+                  <p className="portfolio-card-tools">React, JavaScript, Node, Express, MongoDB</p>
                 </div>
               <a href="https://messaging-app-2mr0.onrender.com/" target="_blank">
                 <button className="portfolio-icon"><BsFillArrowUpRightCircleFill /></button>
@@ -92,6 +94,7 @@ export function Portfolio() {
                 <div className="portfolio-card-desc">
                   <div className="portfolio-card-title">Photo Tagging Application</div>
                   <div className="portfolio-card-sub-title">Web Design / Development</div>
+                  <p className="portfolio-card-tools">React, JavaScript, Node, Express, MongoDB</p>
                 </div>
               <a href="https://photo-tagging-app-lzga.onrender.com/" target="_blank">
                 <button className="portfolio-icon"><BsFillArrowUpRightCircleFill /></button>
@@ -108,6 +111,7 @@ export function Portfolio() {
                 <div className="portfolio-card-desc">
                   <div className="portfolio-card-title">Weather Application</div>
                   <div className="portfolio-card-sub-title">Web Design / Development</div>
+                  <p className="portfolio-card-tools">HTML5, CSS3, JavaScript, Open Weather API</p>
                 </div>
               <a href="https://eternum101.github.io/weather-app/" target="_blank">
                 <button className="portfolio-icon"><BsFillArrowUpRightCircleFill /></button>
@@ -122,6 +126,7 @@ export function Portfolio() {
                 <div className="portfolio-card-desc">
                   <div className="portfolio-card-title">Shopping Cart Project</div>
                   <div className="portfolio-card-sub-title">Web Design / Development</div>
+                  <p className="portfolio-card-tools">React, JavaScript, Node, Vite</p>
                 </div>
               <a href="https://brayden-shopping-cart.netlify.app/" target="_blank">
                 <button className="portfolio-icon"><BsFillArrowUpRightCircleFill /></button>
@@ -136,6 +141,7 @@ export function Portfolio() {
                 <div className="portfolio-card-desc">
                   <div className="portfolio-card-title">Tic Tac Toe Game</div>
                   <div className="portfolio-card-sub-title">Web Design / Development</div>
+                  <p className="portfolio-card-tools">HTML5, CSS3, JavaScript</p>
                 </div>
               <a href="https://eternum101.github.io/tic-tac-toe/" target="_blank">
                 <button className="portfolio-icon"><BsFillArrowUpRightCircleFill /></button>

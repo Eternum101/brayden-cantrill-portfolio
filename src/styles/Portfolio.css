@@ -81,7 +81,7 @@
 
 .portfolio-card-desc-container {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     align-self: stretch;
     justify-content: space-between;
     width: 100%;
@@ -104,6 +104,13 @@
     font-size: 14px;
     letter-spacing: 0;
     line-height: 150%;
+}
+
+.portfolio-card-tools {
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 150%;
+    width: 300px;
 }
 
 .portfolio-icon {
@@ -212,6 +219,10 @@
     .portfolio-icon {
         margin-top: 10px;
     }
+
+    .portfolio-card-tools {
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
@@ -250,5 +261,9 @@
 
     .portfolio-icon {
         margin-top: 10px;
+    }
+
+    .portfolio-card-tools {
+        width: 250px;
     }
 }
