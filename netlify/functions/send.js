@@ -1,5 +1,5 @@
-import nodemailer from 'nodemailer';
-import axios from 'axios';
+const nodemailer = require('nodemailer');
+const axios = require('axios');
 
 function createMailClient() {
   return nodemailer.createTransport({
