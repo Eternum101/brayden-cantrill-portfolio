@@ -160,11 +160,11 @@ export function Contact() {
         {isLoading ? (
           <div className="contact-loader"></div>
         ) : (
-      <form onSubmit={handleSubmit} className="text-fields">
+      <form onSubmit={handleSubmit} className="text-fields" data-netlify-recaptcha="true">
           <input placeholder="Name" type="text" value={name} onChange={(e) => setName(e.target.value)} required/>
           <input placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
           <textarea className="textarea-message" placeholder="Your message" value={message} onChange={(e) => setMessage(e.target.value)} required/>
-          <ReCAPTCHA sitekey={siteKey} onChange={handleRecaptchaChange} />
+          <ReCAPTCHA sitekey={siteKey} onChange={handleRecaptchaChange} data-netlify="true"/>
           <button type="submit" className="btn-message" disabled={!recaptchaCompleted}>Send Message</button>
       </form>
     )}
