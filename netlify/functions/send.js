@@ -18,7 +18,7 @@ function createMailClient() {
 
 const mailClient = createMailClient();
 
-exports.handler = async (event, context) => {
+export async function handler(event, context) {
   try {
     const json = JSON.parse(event.body);
 
