@@ -151,7 +151,7 @@ export function Contact() {
         <div className="social-icons" onClick={() => window.open('https://github.com/Eternum101', '_blank')}>
           <FaGithub />
         </div>
-        <div className="social-icons">
+        <div className="social-icons" onClick={() => window.open('https://www.linkedin.com/in/brayden-cantrill-2578b4306/')}>
             <FaLinkedin />
         </div>
         </div>
