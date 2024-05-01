@@ -1,53 +1,52 @@
-const nodemailer = require('nodemailer');
-const cors = require('cors');
-const bodyParser = require('body-parser');
+const nodemailer = require("nodemailer");
 const axios = require('axios');
-const serverless = require('serverless-http');
-const express = require('express');
 
-const app = express();
+function createMailClient() {
+  return nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      type: 'OAuth2',
+      user: process.env.GMAIL_EMAIL_ADDRESS,
+      clientId: process.env.GMAIL_API_CLIENT_ID,
+      clientSecret: process.env.GMAIL_API_CLIENT_SECRET,
+      refreshToken: process.env.GMAIL_API_REFRESH_TOKEN,
+    }
+  });
+}
 
-app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+const mailClient = createMailClient();
 
-app.post('/', async (req, res) => {
-  let { name, email, message, recaptchaToken } = req.body;
+exports.handler = async (event, context) => {
+  try {
+    const json = JSON.parse(event.body);
 
-  const googleVerifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`;
-  const response = await axios.post(googleVerifyURL);
+    // Verify reCAPTCHA
+    const recaptchaToken = json.recaptchaToken;
+    const googleVerifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`;
+    const response = await axios.post(googleVerifyURL);
+    const { success } = response.data;
 
-  const { success } = response.data;
-  if (success) {
-    let transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASSWORD,
-      },
+    if (!success) {
+      return { statusCode: 400, body: 'reCAPTCHA failed.' };
+    }
+
+    const gmailResponse = await mailClient.sendMail({
+      from: json.email, // sender address
+      to: process.env.GMAIL_EMAIL_ADDRESS, // your email address
+      subject: `Message from ${json.name} (${json.email})`,
+      text: json.message, // plain text body
+      html: `<p><strong>From:</strong> ${json.name}</p>
+             <p><strong>Email:</strong> ${json.email}</p>
+             <p><strong>Message:</strong> ${json.message}</p>`
     });
 
-    let mailOptions = {
-      from: email,
-      to: process.env.EMAIL,
-      subject: `Message from ${name} (${email})`,
-      text: `
-        From: ${name}
-        Message: ${message}
-      `,
-      html: `
-      <h1>Message from ${name} (${email})</h1>
-      <p><strong>From:</strong> ${name}</p>
-      <p><strong>Message:</strong> ${message}</p>
-    `,
-    };
-
-    let info = await transporter.sendMail(mailOptions);
-
-    res.send(info);
-  } else {
-    res.status(400).send('reCAPTCHA failed.');
+    return {
+      statusCode: 200,
+      body: "Message sent!" + gmailResponse.messageId
+    }
+  } catch (err) {
+    return { statusCode: 500, body: err.toString() }
   }
-});
-
-exports.handler = serverless(app);
+}
