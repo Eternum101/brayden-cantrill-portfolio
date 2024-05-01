@@ -17,7 +17,6 @@ export function Contact() {
   const [showPopup, setShowPopup] = useState(false);
 
   const siteKey = import.meta.env.VITE_APP_SITE_KEY;
-  const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
   const [recaptchaToken, setRecaptchaToken] = useState(null);
   const [recaptchaCompleted, setRecaptchaCompleted] = useState(false);
 
