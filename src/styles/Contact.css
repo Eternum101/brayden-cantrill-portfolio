@@ -131,7 +131,8 @@
     border: none;
     color: #1f1f1f;
     padding: 14px 16px;
-    width: 566px;
+    width: 100%;
+    max-width: 566px;
     font-size: 14px;
     letter-spacing: 0;
     line-height: 150%;
