@@ -41,7 +41,7 @@ export function About() {
           <div className="about-title">About Me</div>
           <div className="about-description">
             I'm a passionate web developer that specialises in both front-end and back-end development.
-            I'm known for writing clean, efficient code and for having an eye for detail whilst being commited to creating
+            I'm known for writing clean, efficient code and for having an eye for detail whilst, being commited to creating
             seamless user experiences on the web.
           </div>
         </motion.div>
