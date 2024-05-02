@@ -415,7 +415,7 @@
 
 @media only screen 
   and (min-device-width: 768px) 
-  and (max-device-width: 1024px) {
+  and (max-device-width: 1163px) {
     .hero-section {
         gap: 0px;
         height: 100%;
@@ -457,6 +457,21 @@
 
     .hero-image {
         width: 357px;
+    }
+
+    .scroll-down-container {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+    .hero-section {
+        gap: 0px;
+        height: 100%;
+    }
+
+    .hero-image {
+        margin-bottom: 50px
     }
 
     .scroll-down-container {
