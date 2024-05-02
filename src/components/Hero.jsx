@@ -1,7 +1,6 @@
 import React from "react"
 import heroImage from '../assets/hero-image.png';
 import { motion } from 'framer-motion';
-import Resume from '../assets/Brayden-Cantrill-Resume_Portfolio.pdf'
 
 export function Hero() {
     return (
@@ -18,9 +17,7 @@ export function Hero() {
             <a href="#portfolio-section">Portfolio</a>
             <a href="#contact-section">Contact</a>
         </div>
-        <a href="#contact-section">
-            <button className="btn-talk">Let's Talk</button>
-        </a>
+            <button onClick={() => window.location.href = 'mailto:cantrill.brayden@gmail.com'} className="btn-talk">Let's Talk</button>
         </motion.div>
         <div className="information-container">
         <motion.div className="information-header" initial={{ opacity: 0, x: -50 }}
@@ -39,7 +36,7 @@ export function Hero() {
             </p>
             </div>
             <div className="btn-hero-container">
-            <a href={Resume} target="blank">
+            <a href="#contact-section">
                 <button className="btn-hire">Hire Me</button>
             </a>
             <a href="#portfolio-section">
