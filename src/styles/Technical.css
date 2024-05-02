@@ -179,3 +179,25 @@
         height: 100px;
     }
 }
+
+@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+    .technical-cards {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .technical-card {
+        height: 100%;
+        width: 80%;
+        align-items: center;
+        align-self: center;
+    }
+
+    .card-description {
+        width: 80%
+    }
+
+    .card-devicons {
+        padding: 20px;
+    }
+}
