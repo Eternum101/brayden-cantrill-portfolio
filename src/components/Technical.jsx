@@ -66,7 +66,7 @@ export function Technical() {
               <div className="card-icon"><MdOutlineMonitor /></div>
               <div className="card-title">Front End</div>
               <p className="card-description">
-                &#34;Proficient in front-end development, I specialize in creating responsive designs, implementing interactive features, and optimizing user experience.&#34;
+                “Proficient in front-end development, I specialize in creating responsive designs, implementing interactive features, and optimizing user experience.”
               </p>
             <div className="card-devicons">
                 <div className="devicons-container">
@@ -95,7 +95,7 @@ export function Technical() {
             <div className="card-icon"><FaCode /></div>
               <div className="card-title">Back End</div>
               <p className="card-description">
-                &#34;My back-end development skills encompass server-side logic, database management, and API integration, ensuring seamless data flow and functionality.&#34;
+                “My back-end development skills encompass server-side logic, database management, and API integration, ensuring seamless data flow and functionality.”
               </p>
               <div className="card-devicons">
                 <div className="devicons-container">
