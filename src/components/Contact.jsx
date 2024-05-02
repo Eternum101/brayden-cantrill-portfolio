@@ -46,6 +46,8 @@ export function Contact() {
         setName("");
         setEmail("");
         setMessage("");
+        setRecaptchaToken("");
+        setRecaptchaCompleted(false);
       } else {
       }
     };
