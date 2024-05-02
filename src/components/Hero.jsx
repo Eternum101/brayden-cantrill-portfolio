@@ -1,6 +1,7 @@
 import React from "react"
 import heroImage from '../assets/hero-image.png';
 import { motion } from 'framer-motion';
+import Resume from '../assets/Brayden-Cantrill-Resume_Portfolio.pdf'
 
 export function Hero() {
     return (
@@ -38,7 +39,9 @@ export function Hero() {
             </p>
             </div>
             <div className="btn-hero-container">
+            <a href={Resume} target="blank">
                 <button className="btn-hire">Hire Me</button>
+            </a>
             <a href="#portfolio-section">
                 <button className="btn-portfolio">Portfolio</button>
             </a>
