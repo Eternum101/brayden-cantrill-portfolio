@@ -1,8 +1,15 @@
-# React + Vite
+# Brayden Cantrill - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 [View Portfolio](https://brayden-cantrill-portfolio.netlify.app/)
 
-Currently, two official plugins are available:
+## Table of Contents
+- [About The Project](#about-the-project)
+- [Built With](#built-with)
+- [Screenshots](#screenshots)
+- [Features](#features)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Back to Top](#brayden-cantrill-portfolio)
+
+## Features
+
+[Back to Top](#brayden-cantrill-portfolio)
