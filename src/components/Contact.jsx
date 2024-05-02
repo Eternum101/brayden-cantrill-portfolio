@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FaPhoneVolume } from "react-icons/fa6";
 import { IoMailSharp } from "react-icons/io5";
 import { FaLocationArrow } from "react-icons/fa";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -133,10 +132,6 @@ export function Contact() {
             </p>
           </div>
           <div className="contact-details-container">
-            <div className="details">
-                <FaPhoneVolume />
-              <div className="detail-description">0435 017 722</div>
-            </div>
             <div className="details">
                 <IoMailSharp />
                 <div className="detail-description"> cantrill.brayden@gmail.com</div>
