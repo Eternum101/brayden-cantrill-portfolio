@@ -25,6 +25,8 @@ My portfolio is a reflection of my technical skills, creativity, and passion for
 
 ![image](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue)
 
+![image](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
+
 [Back to Top](#brayden-cantrill-portfolio)
 
 ## Features
