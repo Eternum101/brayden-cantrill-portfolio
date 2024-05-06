@@ -30,6 +30,7 @@ My portfolio is a reflection of my technical skills, creativity, and passion for
 ---
 
 📧 **Nodemailer**
+
 🛡️ **OAuth 2.0**
 
 
