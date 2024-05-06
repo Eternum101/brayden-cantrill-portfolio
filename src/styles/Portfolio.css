@@ -214,6 +214,7 @@
 
     .github-container {
         flex-direction: column;
+        text-align: center;
     }
 
     .portfolio-icon {
