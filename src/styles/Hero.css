@@ -24,16 +24,6 @@
     backdrop-filter: blur(50px);
 }
 
-.background {
-    background-color: #6c14fc;
-    border-radius: 73px;
-    height: 146px;
-    left: 438px;
-    position: absolute;
-    top: -80px;
-    width: 146px;
-}
-
 .logo {
     display: flex;
     align-items: flex-start;
