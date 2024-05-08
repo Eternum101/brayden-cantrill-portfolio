@@ -1,21 +1,32 @@
-import React from "react"
+import React, { useState } from "react"
 import heroImage from '../assets/hero-image.png';
 import { motion } from 'framer-motion';
 
 export function Hero() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen)
+    }
+
     return (
     <section className="hero-section">
         <motion.div className="navbar" initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}>
-            <div className="logo">
+            <div className="logo" onClick={() => window.scrollTo(0, 0)}>
                 Brayden <span>Cantrill</span>
             </div>
-        <div className="links">
+        <div className={`links ${menuOpen ? 'open' : ''}`}>
             <a href="#about-section">About</a>
             <a href="#technical-section">Skills</a>
             <a href="#portfolio-section">Portfolio</a>
             <a href="#contact-section">Contact</a>
+        </div>
+        <div className={`hamburger-menu ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+            <div className="burger burger1"></div>
+            <div className="burger burger2"></div>
+            <div className="burger burger3"></div>
         </div>
             <button onClick={() => window.location.href = 'mailto:cantrill.brayden@gmail.com'} className="btn-talk">Let's Talk</button>
         </motion.div>
