@@ -5,7 +5,6 @@
 ## Table of Contents
 - [About The Project](#about-the-project)
 - [Built With](#built-with)
-- [Features](#features)
 
 ## About The Project
 My portfolio is a reflection of my technical skills, creativity, and passion for continuous learning, showcasing various projects that demonstrate my coding, problem-solving, and design abilities.
